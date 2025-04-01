@@ -3,7 +3,10 @@
 set -e
 
 main() {
+    # disk_name is intentionally left empty to avoid accidentially shredding
+    # a drive.
     local -r disk_name=''
+
     local -r output_file="output_shred_${disk_name}.txt"
 
     if [ -z "${disk_name}" ] ; then
